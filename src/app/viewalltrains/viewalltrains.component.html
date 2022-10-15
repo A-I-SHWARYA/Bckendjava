@@ -1,3 +1,43 @@
-<p>Hi {{name}}</p>
+<!--<p>Hi {{name}}</p>
 <input type="text" class="form-control" value="{{name}}" name="name" [(ngModel)]="name">
-<button class="btn btn-primary" [disabled]="status" (click)="read()">Submit</button>
+<button class="btn btn-primary" [disabled]="status" (click)="read()">Submit</button>-->
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="row g-3">
+                        <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+            
+            
+                            <table class="table table-striped">
+                                <thead class="table-warning">
+                                  <tr>
+                                    <th scope="col">SERIAL NUMBER</th>
+                                    <th scope="col">STATION CODE</th>
+                                    <th scope="col">STATION NAME</th>
+                                    <th scope="col">ARRIVAL TIME</th>
+                                    <th scope="col">DEPARTURE TIME</th>
+                                    <th scope="col">DISTANCE</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let i of railist.Route">
+                                    <td>{{i.SerialNo}}</td>
+                                    <td>{{i.StationCode}}</td>
+                                    <td>{{i.StationName}}</td>
+                                    <td>{{i.ArrivalTime}}</td>
+                                    <td>{{i.DepartureTime}}</td>
+                                    <td>{{i.Distance}}</td>
+                                 
+                                  
+                                </tbody>
+                              </table>
+            
+                        </div>
+                    </div>
+                
+            
+            
+
+        </div>
+    </div>
+</div>
